@@ -32,8 +32,8 @@ project_root/
 First, clone the repository using Git:
 
 ```bash
-git clone https://github.com/saketjha34/Traffic-Mangement-System.git
-cd Traffic-Mangement-System
+git clone https://github.com/saketjha34/Traffic-Management-System.git
+cd Traffic-Management-System
 ```
 
 ### 2. Install Dependencies
