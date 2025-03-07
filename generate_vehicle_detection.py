@@ -13,7 +13,7 @@ model = YOLO(model_path)
 tracker = sv.ByteTrack()
 
 # Define vehicle classes
-VEHICLE_CLASSES = ['bicycle', 'car', 'bus', 'truck', 'motorbike']
+VEHICLE_CLASSES = ['bicycle', 'car', 'bus', 'truck', 'motorcycle']
 
 def generate_predictions(input_video_path: str, 
                          output_folder: str, 

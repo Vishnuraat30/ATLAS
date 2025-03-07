@@ -39,7 +39,7 @@ def generate_predictions(input_video_path: str,
     model = YOLO(model_path) 
     tracker = sv.ByteTrack()
 
-    VEHICLE_CLASSES =  ['bicycle', 'car', 'bus', 'truck', 'motorbike']
+    VEHICLE_CLASSES =  ['bicycle', 'car', 'bus', 'truck', 'motorcycle']
     box_annotator = sv.BoxAnnotator()
     label_annotator = sv.LabelAnnotator()
 
