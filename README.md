@@ -27,7 +27,16 @@ project_root/
 
 ## Setup Instructions
 
-### 1. Install Dependencies
+### 1. Clone the Repository
+
+First, clone the repository using Git:
+
+```bash
+git clone https://github.com/saketjha34/Traffic-Mangement-System.git
+cd Traffic-Mangement-System
+```
+
+### 2. Install Dependencies
 
 Ensure you have Python installed (preferably 3.8+). Then, install the required dependencies:
 
@@ -35,7 +44,7 @@ Ensure you have Python installed (preferably 3.8+). Then, install the required d
 pip install -r requirements.txt
 ```
 
-### 2. Place Input Video
+### 3. Place Input Video
 
 Place your traffic video inside the `traffic-videos/` folder. Example:
 
@@ -43,7 +52,7 @@ Place your traffic video inside the `traffic-videos/` folder. Example:
 traffic-videos/test-video.mp4
 ```
 
-### 3. Generate a Mask Image
+### 4. Generate a Mask Image
 
 A mask is used to filter the region of interest in the video. To generate a mask automatically, run:
 
@@ -53,7 +62,7 @@ python generate_mask.py
 
 This will create a grayscale mask image where white (255) represents the area to analyze, and black (0) is ignored.
 
-### 4. Run the Vehicle Detector
+### 5. Run the Vehicle Detector
 
 Execute the script with the following command:
 
@@ -61,7 +70,7 @@ Execute the script with the following command:
 python run_detector.py --input_video traffic-videos/test-video1.mp4 --output_folder output --mask_image masks/test-video1_mask.jpg --confirmation_frame 15 --confidence_threshold 0.35
 ```
 
-### 5. Output
+### 6. Output
 
 - **Processed Video**: The annotated video is saved in `output/test-video/`.
 - **JSON Report**: Vehicle tracking data is stored in `output/test-video/test-video_traffic_data.json`.
