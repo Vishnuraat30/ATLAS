@@ -54,7 +54,7 @@ if __name__ == "__main__":
     # Example usage
     video_path = "traffic-videos/test-video1.mp4"  # Path to input video
     output_path = "output_video.mp4"  # Path to save output video
-    model_path = "models/VehicleDetectionYolov8Model.pt"  # Path to your YOLO model
+    model_path = "models/VehicleDetectionYolov11LModel.pt"  # Path to your YOLO model
 
     predict_video(video_path, output_path, model_path)
     

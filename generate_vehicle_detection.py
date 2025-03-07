@@ -6,7 +6,7 @@ from ultralytics import YOLO
 from collections import defaultdict, deque
 
 # Load YOLO model
-model_path = "models/yolo11x.pt"
+model_path = "models/VehicleDetectionYolov11LModel.pt"
 model = YOLO(model_path) 
 
 # Initialize tracker

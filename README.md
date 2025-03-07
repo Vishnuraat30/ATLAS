@@ -10,14 +10,17 @@ This project uses YOLOv8 for vehicle detection and tracking in traffic videos. T
 project_root/
 │── models/
 │   └── VehicleDetectionYolov8Model.pt  # Pretrained YOLOv8 model
+│   └── VehicleDetectionYolov11LModel.pt  # Pretrained YOLOv8 model
 │── traffic-videos/
 │   └── test-video.mp4                   # Place input videos here
 │── masks/
 │   └── test-video_mask.jpg               # Place mask images here
 │── output/
 │   └── Results will be stored here
-│── script.py                              # Main vehicle detection script
+│── generate_vehicle_detection.py           # Main vehicle detection script
+│── run_detector.py                         # CMD Script for Vehicle Detection
 │── generate_mask.py                        # Script to generate mask images
+│── get_predictions.py                      # Script to generate detection(without mask)
 │── requirements.txt                        # Required Python packages
 │── README.md                               # This file
 ```
@@ -45,7 +48,7 @@ traffic-videos/test-video.mp4
 A mask is used to filter the region of interest in the video. To generate a mask automatically, run:
 
 ```bash
-python generate_mask.py --input_video traffic-videos/test-video.mp4 --output_mask masks/test-video_mask.jpg
+python generate_mask.py 
 ```
 
 This will create a grayscale mask image where white (255) represents the area to analyze, and black (0) is ignored.
@@ -55,7 +58,7 @@ This will create a grayscale mask image where white (255) represents the area to
 Execute the script with the following command:
 
 ```bash
-python script.py --input_video traffic-videos/test-video.mp4 --output_folder output --mask_image masks/test-video_mask.jpg
+python run_detector.py --input_video traffic-videos/test-video1.mp4 --output_folder output --mask_image masks/test-video1_mask.jpg --confirmation_frame 15 --confidence_threshold 0.35
 ```
 
 ### 5. Output
@@ -82,5 +85,4 @@ Motorcycle: 5
 
 ## Credits
 
-Developed using Ultralytics YOLOv8 and Supervision Library.
-
+Developed using Ultralytics and Supervision Library.
