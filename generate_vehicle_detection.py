@@ -130,11 +130,11 @@ def generate_predictions(input_video_path: str,
         print(f"{cls.capitalize()}: {len(confirmed_counts[cls])}")
 
 if __name__ == "__main__":
-    input_video_path = "traffic-videos/test-video1.mp4"
-    output_folder = "output_yolo12x"
-    mask_image_path = "masks/test-video1_mask.jpg"
+    input_video_path = "traffic-videos/test-video4.mp4"
+    output_folder = "output"
+    mask_image_path = "masks/test-video4_mask.jpg"
     CONFIRMATION_FRAMES = 20  
-    CONFIDENCE_THRESHOLD = 0.30
+    CONFIDENCE_THRESHOLD = 0.35
 
     generate_predictions(input_video_path, 
                          output_folder,

@@ -130,7 +130,7 @@ if __name__ == "__main__":
     parser.add_argument("--output_folder", type=str, required=True, help="Folder to save output video and JSON data")
     parser.add_argument("--mask_image", type=str, required=True, help="Path to mask image file")
     parser.add_argument("--confirmation_frame", type=int, default=20, help="Number of frames to confirm a vehicle detection")
-    parser.add_argument("--confidence_threshold", type=float, default=0.30, help="Confidence threshold for detections")
+    parser.add_argument("--confidence_threshold", type=float, default=0.35, help="Confidence threshold for detections")
 
     args = parser.parse_args()
 
