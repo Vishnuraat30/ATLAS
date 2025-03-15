@@ -26,7 +26,7 @@ project_root/
 ```
 
 <p align="center">
-    <img src="../masks/test-video4_mask.jpg">
+    <img src="masks/test-video4_mask.jpg">
 </p>
 
 ## Setup Instructions
