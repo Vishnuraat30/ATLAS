@@ -39,6 +39,8 @@ project_root/
 
 ### 1. Clone the Repository
 
+Ensure you have Python(preferably 3.8+) & git installed. Then, install the required dependencies:
+
 First, clone the repository using Git:
 
 ```bash
@@ -80,7 +82,9 @@ Execute the script with the following command:
 python run_detector.py --input_video traffic-videos/test-video1.mp4 --output_folder output --mask_image masks/test-video1_mask.jpg --confirmation_frame 15 --confidence_threshold 0.35
 ```
 
-## **Parameters & Customization**  
+### 6. Run the Traffic Signal Optimization Algorithim
+
+#### **Parameters & Customization**  
 
 The algorithm uses the following default parameters, which can be modified:  
 
@@ -93,7 +97,11 @@ The algorithm uses the following default parameters, which can be modified:
 
 You can modify these values in `DBWSA.py`.  
 
-### 6. Output
+```bash
+python DBWSA.py 
+```
+
+### 7. Output
 
 - **Processed Video**: The annotated video is saved in `output/test-video/`.
 - **JSON Report**: Vehicle tracking data is stored in `output/test-video/test-video_traffic_data.json`.
@@ -108,6 +116,11 @@ Car: 30
 Bus: 10
 Truck: 5
 Motorcycle: 5
+Optimized Traffic Signal Timings:
+Road 1 - Green: 20s, Yellow: 3s, Red: 37s
+Road 2 - Green: 15s, Yellow: 3s, Red: 42s
+Road 3 - Green: 25s, Yellow: 3s, Red: 32s
+Road 4 - Green: 18s, Yellow: 3s, Red: 39s
 ```
 
 ## Notes
