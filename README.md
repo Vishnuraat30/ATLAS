@@ -2,7 +2,13 @@
 
 ## Overview
 
-This project uses YOLOv8 for vehicle detection and tracking in traffic videos. The detected vehicles are counted and logged into a JSON file.
+This project implements an adaptive traffic signal timing system based on real-time vehicle density and type. It uses the **Density-Based Weighted Signal Allocation (DBWSA) Algorithm** to dynamically allocate green, yellow, and red signal durations based on traffic data.  
+
+### **Key Features**  
+✔ Dynamically adjusts signal timing based on traffic density.  
+✔ Weighs different vehicle types for fair allocation.  
+✔ Ensures efficient traffic flow by preventing unnecessary delays.  
+✔ Works with real-time traffic data in JSON format.  
 
 ## Project Structure
 
@@ -73,6 +79,19 @@ Execute the script with the following command:
 ```bash
 python run_detector.py --input_video traffic-videos/test-video1.mp4 --output_folder output --mask_image masks/test-video1_mask.jpg --confirmation_frame 15 --confidence_threshold 0.35
 ```
+
+## **Parameters & Customization**  
+
+The algorithm uses the following default parameters, which can be modified:  
+
+| Parameter         | Description                              | Default |
+|------------------|--------------------------------------|---------|
+| `BASE_GREEN_TIME`  | Minimum green signal duration       | 5s      |
+| `MAX_GREEN_TIME`   | Maximum green signal duration       | 60s     |
+| `YELLOW_TIME`      | Fixed yellow signal duration        | 3s      |
+| `TOTAL_CYCLE_TIME` | Total signal cycle duration        | 60s     |
+
+You can modify these values in `DBWSA.py`.  
 
 ### 6. Output
 
