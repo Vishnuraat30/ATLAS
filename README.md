@@ -25,6 +25,10 @@ project_root/
 │── README.md                               # This file
 ```
 
+<p align="center">
+    <img src="../masks/test-video4_mask.jpg">
+</p>
+
 ## Setup Instructions
 
 ### 1. Clone the Repository
