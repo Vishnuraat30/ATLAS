@@ -1,0 +1,48 @@
+{
+    "intersection": {
+        "road1": {
+            "total_vehicles": 60,
+            "road_length": 200,
+            "vehicle_counts": {
+                "bicycle": 3,
+                "car": 40,
+                "bus": 12,
+                "truck": 5,
+                "motorcycle": 0
+            }
+        },
+        "road2": {
+            "total_vehicles": 25,
+            "road_length": 250,
+            "vehicle_counts": {
+                "bicycle": 2,
+                "car": 22,
+                "bus": 3,
+                "truck": 3,
+                "motorcycle": 0
+            }
+        },
+        "road3": {
+            "total_vehicles": 35,
+            "road_length": 275,
+            "vehicle_counts": {
+                "bicycle": 4,
+                "car": 35,
+                "bus": 8,
+                "truck": 3,
+                "motorcycle": 0
+            }
+        },
+        "road4": {
+            "total_vehicles": 25,
+            "road_length": 200,
+            "vehicle_counts": {
+                "bicycle": 1,
+                "car": 18,
+                "bus": 3,
+                "truck": 3,
+                "motorcycle": 0
+            }
+        }
+    }
+}
