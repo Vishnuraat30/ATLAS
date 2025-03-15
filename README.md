@@ -23,10 +23,13 @@ project_root/
 │   └── test-video_mask.jpg               # Place mask images here
 │── output/
 │   └── Results will be stored here
+│── traffic_data/
+│   └── Intersection Data
 │── generate_vehicle_detection.py           # Main vehicle detection script
 │── run_detector.py                         # CMD Script for Vehicle Detection
 │── generate_mask.py                        # Script to generate mask images
 │── get_predictions.py                      # Script to generate detection(without mask)
+│── DBWSA.py                                # Traffic Signal Optimization Algorithm
 │── requirements.txt                        # Required Python packages
 │── README.md                               # This file
 ```
@@ -82,7 +85,7 @@ Execute the script with the following command:
 python run_detector.py --input_video traffic-videos/test-video1.mp4 --output_folder output --mask_image masks/test-video1_mask.jpg --confirmation_frame 15 --confidence_threshold 0.35
 ```
 
-### 6. Run the Traffic Signal Optimization Algorithim
+### 6. Run the Traffic Signal Optimization Algorithm
 
 #### **Parameters & Customization**  
 
