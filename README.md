@@ -159,7 +159,7 @@ The algorithm uses the following default parameters, which can be modified:
 You can modify these values in `DBWSA.py`.  
 
 ```bash
-python src.DBWSA.py 
+python -m src.DBWSA.py 
 ```
 
 ### 7. Output
