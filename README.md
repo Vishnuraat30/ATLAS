@@ -87,7 +87,7 @@ pip install -r requirements.txt
 
 This project is configured via a `config.yaml` file. Below is a breakdown of the key configuration options and how to use them.
 
-### 📁 `config.yaml` Structure
+### `config.yaml` Structure
 
 ```yaml
 detection:
@@ -107,7 +107,7 @@ traffic_signal_allocator:
   total_cycle_time: 60                                                  # Total cycle time for one signal phase (in seconds)
 ```
 
-### ✅ Usage
+### Usage
 
 1. **Update paths** as per your directory structure for video, model, mask, and traffic data.
 2. Ensure the model and mask exist at specified paths before running.
