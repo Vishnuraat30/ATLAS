@@ -147,7 +147,18 @@ python -m src.run_detector
 
 ### 7. Run the Traffic Signal Optimization Algorithm
 
+- Place the `intersection_data.json` file in the `traffic-data` folder.
+- Make sure to set up `config.yaml`, and ensure that `intersection_data.json` matches the schema defined in `schema/intersections.py`.
+
 #### **Parameters & Customization**  Congiure it in `config.yaml` file
+```yaml
+traffic_signal_allocator:
+  traffic_intersection_data_path: "traffic_data/intersection_data.json"
+  base_green_time: 5
+  max_green_time: 60
+  yellow_time: 3
+  total_cycle_time: 60
+```
 
 The algorithm uses the following default parameters, which can be modified:  
 
