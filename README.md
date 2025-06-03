@@ -135,7 +135,7 @@ python -m src.generate_mask
 
 This will create a grayscale mask image where white (255) represents the area to analyze, and black (0) is ignored.
 
-### 5. Run the Vehicle Detector
+### 6. Run the Vehicle Detector
 
 Execute the script with the following command:
 
@@ -143,7 +143,7 @@ Execute the script with the following command:
 python -m src.run_detector
 ```
 
-### 6. Run the Traffic Signal Optimization Algorithm
+### 7. Run the Traffic Signal Optimization Algorithm
 
 #### **Parameters & Customization**  Congiure it in `config.yaml` file
 
@@ -162,10 +162,41 @@ You can modify these values in `DBWSA.py`.
 python -m src.DBWSA.py 
 ```
 
-### 7. Output
+### 8. Output
 
 - **Processed Video**: The annotated video is saved in `output/test-video/`.
 - **JSON Report**: Vehicle tracking data is stored in `output/test-video/test-video_traffic_data.json`.
+
+### 9. Benchmark Results
+
+```bash
+python -m benchmark.traffic_signal_benchmark
+```
+
+The benchmark compares the performance of two traffic signal control strategies:
+
+* **DBWSA (Dynamic Balanced Weighted Signal Allocation)** — an adaptive traffic signal control algorithm.
+* **Fixed Timing** — a traditional fixed-duration traffic signal control.
+
+#### Overall Benchmark Summary
+
+| Metric                               | Value         |
+| ------------------------------------ | ------------- |
+| Average Weighted Green Time (DBWSA)  | 16.44 seconds |
+| Average Weighted Green Time (Fixed)  | 14.00 seconds |
+| Overall Improvement (DBWSA vs Fixed) | **17.45%**    |
+
+The DBWSA approach achieves a notable increase in the average weighted green time compared to the fixed timing method, indicating more efficient signal allocation and improved traffic flow.
+
+#### Peak Performance Metrics During Simulation
+
+| Metric                     | Value         | Iteration |
+| -------------------------- | ------------- | --------- |
+| Max DBWSA Avg Green Time   | 24.66 seconds | 217       |
+| Max Fixed Avg Green Time   | 14.00 seconds | 1         |
+| Max Improvement Percentage | **76.16%**    | 217       |
+
+At iteration 217, DBWSA reached its peak performance, improving green time by over 76% compared to the fixed signal timing baseline.
 
 ## Example Output
 
