@@ -22,13 +22,15 @@ Ideal for smart traffic monitoring systems and adaptive signal control implement
 
 ```
 project_root/
+│── benchmark/
+│   └── traffic_signal_benchmark.py         # Benchmark for DBWSA.py
 │── core/
-│   └── config.py                           # Pretrained YOLOv8 model
+│   └── config.py                           # config.py Pydantic Validated
 │── masks/
 │   └── test-video_mask.jpg                 # Place mask images here
 │── models/
 │   └── VehicleDetectionYolov8Model.pt      # Pretrained YOLOv8 model
-│   └── VehicleDetectionYolov11LModel.pt    # Pretrained YOLOv8 model
+│   └── VehicleDetectionYolov11LModel.pt    # Pretrained YOLOv11 model
 │── output/
 │   └── Results will be stored here
 │── schema/  
