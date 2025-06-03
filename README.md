@@ -1,38 +1,50 @@
-# Vehicle Detection and Traffic Analysis using YOLOv8
+# Vehicle Detection and Traffic Analysis using YOLOv8 and ByteTrack
 
 ## Overview
 
-This project implements an adaptive traffic signal timing system based on real-time vehicle density and type. It uses the **Density-Based Weighted Signal Allocation (DBWSA) Algorithm** to dynamically allocate green, yellow, and red signal durations based on traffic data.  
+This project performs real-time vehicle detection, tracking, and traffic analysis using **YOLOv8** for object detection and **ByteTrack** for multi-object tracking. It processes traffic videos to count and classify vehicles within defined regions, providing valuable data for traffic management and urban planning.
 
 ### **Key Features**  
-✔ Dynamically adjusts signal timing based on traffic density.  
-✔ Weighs different vehicle types for fair allocation.  
-✔ Ensures efficient traffic flow by preventing unnecessary delays.  
-✔ Works with real-time traffic data in JSON format.  
+✔ Detects and tracks multiple vehicle types including cars, buses, trucks, motorcycles, and bicycles.  
+✔ Uses a mask to focus detection on areas of interest for precise analysis.  
+✔ Confirms vehicle presence over multiple frames to improve classification accuracy.  
+✔ Outputs annotated video with bounding boxes, labels, and live vehicle counts.  
+✔ Generates detailed JSON reports summarizing vehicle counts and detection data.  
+✔ Fully configurable via YAML for flexible model, input, and output management.
+
+Ideal for smart traffic monitoring systems and adaptive signal control implementations.
+
 
 ## Project Structure
 
 ```
 project_root/
-│── models/
-│   └── VehicleDetectionYolov8Model.pt  # Pretrained YOLOv8 model
-│   └── VehicleDetectionYolov11LModel.pt  # Pretrained YOLOv8 model
-│── traffic-videos/
-│   └── test-video.mp4                   # Place input videos here
+│── core/
+│   └── config.py                           # Pretrained YOLOv8 model
 │── masks/
-│   └── test-video_mask.jpg               # Place mask images here
+│   └── test-video_mask.jpg                 # Place mask images here
+│── models/
+│   └── VehicleDetectionYolov8Model.pt      # Pretrained YOLOv8 model
+│   └── VehicleDetectionYolov11LModel.pt    # Pretrained YOLOv8 model
 │── output/
 │   └── Results will be stored here
+│── schema/  
+│   └── detections.py                       # Schema for Vehicle Detection
+│   └── intersections.py                    # Schema for Traffic Signal Intersection Data
+│── src/  
+│   └── DBWSA.py                            # Traffic Signal Optimization Algorithm
+│   └── generate_mask.py                    # Script to generate mask images
+│   └── run_detector.py                     # CMD Script for Vehicle Detection
+│   └── get_predictions.py                  # Script to generate detection(without mask)
 │── traffic_data/
 │   └── Intersection Data
-│── generate_vehicle_detection.py           # Main vehicle detection script
-│── run_detector.py                         # CMD Script for Vehicle Detection
-│── generate_mask.py                        # Script to generate mask images
-│── get_predictions.py                      # Script to generate detection(without mask)
-│── DBWSA.py                                # Traffic Signal Optimization Algorithm
+│── traffic-videos/
+│   └── test-video.mp4                      # Place input videos here
+│── config.yaml                             # Config file              
 │── requirements.txt                        # Required Python packages
-│── README.md                               # This file
-```
+│── README.md                               
+│── preview.gif                            
+``` 
 
 <p align="center">
     <img src="preview.gif">

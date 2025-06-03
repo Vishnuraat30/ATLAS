@@ -1,0 +1,6 @@
+to run generate mask
+python -m src.generate_mask
+
+
+to run the detector
+python -m src.run_detector 
